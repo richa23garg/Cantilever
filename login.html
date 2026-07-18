@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="login.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400..800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <video class="cat-video" id="paw-video" muted autoplay loop src="images&videos/paw.mp4"></video>
+
+  <video class="cat-video" id="lying-video" muted autoplay loop src="images&videos/lying.webm"></video>
+
+  <video class="cat-video" id="sneak-video" src="images&videos/sneak.mp4" muted autoplay loop
+      ></video>
+  
+  <main>
+    <div id="full-heading">
+      <p id="welcome">WELCOME TO</p>
+      <img src="images&videos/pawgress.png" id="pawgress">
+      <p id="tagline">this cat is lazy, but we've got work to do</p>
+    </div>
+    
+    <div id="credentials">
+      
+      <div id="enter-credentials">
+        <!-- CHANGED: type="text" -> type="email", added id="email" and required
+             so Firebase gets a real value to check and does basic format validation -->
+        <div class="text-fields">Email<br><input type="email" id="email" required placeholder="richa23garg@gmail.com"></div>
+        
+        <!-- ADDED: id="password" and required, so JS can read this input's value -->
+        <div class="text-fields">Password <br><input type="password" id="password" required placeholder="Atleast 6 characters"></div>
+        
+        <!-- ADDED: this whole line — a spot for login error messages (wrong password etc)
+             to appear. Empty by default, JS fills it in only when there's an error. -->
+        <p id="auth-error"></p>
+     </div>
+    
+      <div id="submit-credentials">
+        <!-- ADDED: id="login-btn" so JS can attach a click handler -->
+        <button id="login-btn">Login</button>
+        <!-- ADDED: href="register.html" — this link had no destination before -->
+        <pre>Don't have an account?
+<a href="register.html">Register</a></pre>
+      </div>
+    
+    </div>
+  </main>
+
+  <!-- ADDED: loads Firebase + login logic. type="module" is required because
+       firebase-config.js uses ES module import/export syntax -->
+  <script type="module" src="auth.js"></script>
+  
+</body>
+</html>

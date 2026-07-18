@@ -1,0 +1,129 @@
+*{
+  margin:0px;
+  padding:0px;
+  font-family:"Wix Madefor Display";
+}
+
+body {
+  height:100vh;
+  margin: 0;
+  background-color: #fef1e9;
+}
+
+.cat-video{
+  position: absolute;
+}
+
+#paw-video{
+  bottom:25px;
+  left:0px;
+  height:900px;
+}
+#lying-video{
+  bottom:0px;
+  right:0px;
+  z-index:2;
+  height:1000px;
+}
+#sneak-video{
+  top:0px;
+  left:950px;
+  height:650px;
+}
+main{
+  position:absolute;
+  left:50%;
+  top:45%;
+  transform:translate(-50%,-50%);
+  /* ADDED: z-index so the login card always sits above the cat videos,
+     in case any of them overlap it at certain screen sizes */
+  z-index: 5;
+}
+#full-heading{
+  text-align:center;
+}
+#welcome{
+  font-size:20px;
+  position: relative;
+  top:5px;
+}
+#pawgress{
+   width:500px;
+}
+#tagline{
+  font-size:25px;
+  font-weight:900;
+  position: relative;
+  bottom:15px;
+  letter-spacing: 2px;
+}
+#credentials{
+  margin-top:12.5px;
+  height:250px;
+  width:750px;
+  border-radius:40px;
+  box-shadow: 0 0 75px 5px pink;
+  display:flex;
+}
+
+#credentials> div{
+  box-sizing: border-box;
+  height:100%;
+  width:50%;
+  padding:50px 0px 50px 75px;
+  display:flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  font-size:25px;
+}
+#enter-credentials{
+  row-gap:25px;
+}
+input{
+  height:35px;
+  width:250px;
+  border-radius: 10px;
+  border:none;
+  color:pink;
+  font-size: 15px;
+  padding-left:7.5px;
+  background-color: rgba(73, 42, 16,0.5);
+}
+button{
+  height:50px;
+  width:150px;
+  background-color: pink;
+  border:none;
+  border-radius:10px;
+  font-size:25px;
+  box-shadow: -1px 2px 195px -30px rgba(0,0,0,0.75);
+-webkit-box-shadow: -1px 2px 195px -30px rgba(0,0,0,0.75);
+-moz-box-shadow: -1px 2px 195px -30px rgba(0,0,0,0.75);
+margin-bottom:12.5px;
+cursor:pointer;
+}
+#submit-credentials pre{
+  font-size:17.5px;
+}
+pre a{
+  color: rgba(73, 42, 16,1);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* ADDED: this whole block — styles the #auth-error element added in the HTML.
+   Hidden by default (display:none), JS switches it to display:block and fills
+   in text only when a login/register error actually happens. */
+#auth-error {
+  display: none;
+  color: #b23a48;
+  font-size: 11px;
+  background: rgba(178, 58, 72, 0.12);
+  padding: 6px 9px;
+  border-radius: 7px;
+  margin-top: -5px;
+}
+#auth-error.visible {
+  display: block;
+}
