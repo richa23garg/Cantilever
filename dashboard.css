@@ -14,7 +14,7 @@ body {
 .corner-cat {
   position: fixed;
   bottom: -40px;
-  right: -40px;
+  left: 0px;
   height: 260px;
   z-index: 0;
   pointer-events: none; /* so it never blocks clicks on real buttons behind/near it */
