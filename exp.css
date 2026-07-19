@@ -1,0 +1,209 @@
+*{
+  margin:0px;
+  padding:0px;
+  font-family:"Wix Madefor Display";
+}
+
+body {
+  width:100vw;
+  margin: 0;
+  background-color: #fef1e9;
+  overflow-x: hidden;
+  
+}
+
+/* #all-videos{
+  width:100vw;
+  height:100vh;
+  position:relative;
+} */
+
+.cat-video{
+  position:fixed;
+  
+}
+
+#paw-video{
+  bottom:0%;
+  left:0%;
+  width:30%;
+}
+#lying-video{
+  bottom:0%;
+  right:0%;
+  width:35%;
+  z-index:2;
+}
+#sneak-video{
+  top:0%;
+  left:60%;
+  width:27%;
+}
+main{
+  height:100vh;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* position:fixed;
+  left:50%;
+  top:45%;
+  transform:translate(-50%,-50%); */
+  position:relative;
+  z-index: 5;
+
+}
+#full-heading{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align:center;
+  margin-bottom:5px;
+  width:55vw;
+  position:relative;
+  bottom:10px;
+  
+
+ 
+ 
+}
+#welcome{
+  font-size:1.2rem;
+  width:35%;
+  position: relative;
+  top:5px;
+}
+#pawgress{
+  width:60%;
+  
+   
+   
+}
+#tagline{
+  font-size:1.7rem;
+  font-weight:900;
+  position: relative;
+  bottom:15px;
+  letter-spacing: 1.5px;
+}
+#credentials{
+  
+  height:250px;
+  width:750px;
+  border-radius:40px;
+  box-shadow: 0 0 75px 5px pink;
+  display:flex;
+}
+
+#credentials> div{
+  box-sizing: border-box;
+  height:100%;
+  width:50%;
+  padding:100px 0px 100px 75px;
+  display:flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  font-size:1.5rem;
+}
+#enter-credentials{
+  row-gap:25px;
+}
+#email, #password{
+  font-size:1.2rem;
+}
+input{
+  box-sizing: border-box;
+  height:35px;
+  width:250px;
+  border-radius: 10px;
+  border:none;
+  color:pink;
+  padding:8px;
+  background-color: rgba(73, 42, 16,0.5);
+}
+button{
+  flex-shrink:0;
+  height:40px;
+  width:150px;
+  background-color: pink;
+  border:none;
+  border-radius:10px;
+  font-size:1.5rem;
+  box-shadow: -1px 2px 195px -30px rgba(0,0,0,0.75);
+  -webkit-box-shadow: -1px 2px 195px -30px rgba(0,0,0,0.75);
+  -moz-box-shadow: -1px 2px 195px -30px rgba(0,0,0,0.75);
+  margin-bottom:12.5px;
+  cursor:pointer;
+}
+#submit-credentials{
+  gap:10px;
+  padding:70px 0px 70px 75px;
+
+}
+#submit-credentials pre{
+  font-size:1.2rem;
+}
+pre a{
+  color: rgba(73, 42, 16,1);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* ADDED: this whole block — styles the #auth-error element added in the HTML.
+   Hidden by default (display:none), JS switches it to display:block and fills
+   in text only when a login/register error actually happens. */
+#auth-error {
+  display: none;
+  color: #b23a48;
+  font-size: 11px;
+  background: rgba(178, 58, 72, 0.12);
+  padding: 6px 9px;
+  border-radius: 7px;
+  margin-top: -5px;
+}
+#auth-error.visible {
+  display: block;
+}
+
+@media screen and (max-width:600px){
+  html{
+  font-size:10px;
+}
+  #paw-video{
+    bottom:30%;
+  
+}
+main{
+  margin:200px 0px 200px 0px;
+  justify-content: flex-start;
+}
+#full-heading{
+  width:80vw;
+}
+#welcome{
+  top:2px;
+}
+
+#tagline{
+  bottom:2px;
+}
+#credentials{
+  flex-direction: column;
+  height:360px;
+  width:250px;
+}
+#credentials>div{
+  height:50%;
+  width:100%;
+  padding:50px 20px 50px 20px;
+}
+input{
+  width:200px;
+}
+
+
+
+}
+  
