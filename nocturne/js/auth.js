@@ -42,7 +42,7 @@ if (loginBtn) {
 
     try {
       await signInWithEmailAndPassword(auth, email, password);
-      window.location.href = "dashboard.html";
+      window.location.href = "index.html";
     } catch (error) {
       showError(friendlyError(error));
       loginBtn.disabled = false;
@@ -69,7 +69,7 @@ if (registerBtn) {
 
     try {
       await createUserWithEmailAndPassword(auth, email, password);
-      window.location.href = "dashboard.html";
+      window.location.href = "index.html";
     } catch (error) {
       showError(friendlyError(error));
       registerBtn.disabled = false;
