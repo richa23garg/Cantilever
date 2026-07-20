@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nocturne — Posts</title>
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geomini:wght@200..800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div id="topbar">
+  <img src="../images-videos/nocturne.png">
+
+  <div class="topbar-right" id="logged-in-controls" style="display:none;">
+    <span class="user-email" id="user-email"></span>
+    <button class="btn-outline" id="logout-btn">Log Out</button>
+  </div>
+
+  <div class="topbar-right" id="logged-out-controls">
+    <a href="login.html" class="btn-outline">Log In</a>
+  </div>
+</div>
+
+<main id="feed-main">
+
+  <div id="feed-header">
+    <h1>All Posts</h1>
+    <p>Thoughts, notes, and whatever's on my mind.</p>
+  </div>
+
+  <button class="btn-accent" id="new-post-btn" style="display:none; margin-bottom:24px;">+ New Post</button>
+
+  <div class="frosty" id="post-form-panel">
+    <input type="text" id="post-title" placeholder="Post title">
+    <input type="text" id="post-image" placeholder="Image URL (optional)">
+    <textarea id="post-body" placeholder="Write your post..."></textarea>
+    <div class="form-actions">
+      <button class="btn-accent" id="save-post-btn">Save Post</button>
+      <button class="btn-ghost" id="cancel-post-btn">Cancel</button>
+    </div>
+  </div>
+
+  <div id="post-list"></div>
+
+  <div class="empty-state" id="empty-state" style="display:none;">
+    No posts yet.
+  </div>
+
+</main>
+
+<script type="module" src="../js/dashboard.js"></script>
+</body>
+</html>
