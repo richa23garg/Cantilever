@@ -1,0 +1,188 @@
+*{
+  padding:0px;
+  margin:0px;
+  font-family: "Geomini", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  box-sizing: border-box;
+}
+
+body{
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 20% 0%, rgba(255,77,46,0.18), transparent 45%),
+    radial-gradient(circle at 100% 30%, rgba(255,145,66,0.12), transparent 50%),
+    #0a0705;
+  color: #f3ede8;
+}
+
+a { text-decoration: none; color: inherit; }
+
+/* ---------- top bar ---------- */
+#topbar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding: 22px 48px;
+  background: rgba(255,255,255,0.04);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255,120,70,0.2);
+}
+
+#topbar img{
+  height: 46px;
+}
+
+#topbar-right,
+.topbar-right{
+  display:flex;
+  align-items:center;
+  gap:16px;
+}
+
+.user-email{
+  font-size: 0.9rem;
+  color: rgba(243,237,232,0.6);
+}
+
+.btn-outline{
+  padding: 10px 20px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,120,70,0.35);
+  background: rgba(255,255,255,0.04);
+  color: #f3ede8;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.btn-outline:hover{ border-color:#ff6a3d; color:#ff9142; }
+
+.btn-accent{
+  padding: 12px 24px;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(120deg, #ff4d2e, #ff9142);
+  color: #1a0d08;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+/* ---------- main feed ---------- */
+#feed-main{
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 44px 24px 90px;
+}
+
+#feed-header{ margin-bottom: 28px; }
+#feed-header h1{
+  font-size: 2.2rem;
+  font-weight: 700;
+  background: linear-gradient(120deg, #ff9142, #ff4d2e);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+#feed-header p{
+  color: rgba(243,237,232,0.55);
+  margin-top: 4px;
+}
+
+/* frosty containers — shared look for form + post cards */
+.frosty{
+  background: rgba(255,255,255,0.055);
+  backdrop-filter: blur(22px) saturate(160%);
+  -webkit-backdrop-filter: blur(22px) saturate(160%);
+  border: 1px solid rgba(255,120,70,0.22);
+  border-radius: 24px;
+}
+
+#post-form-panel{
+  padding: 26px;
+  margin-bottom: 28px;
+  display: none;
+}
+#post-form-panel.visible{ display:block; }
+
+#post-form-panel input,
+#post-form-panel textarea{
+  width: 100%;
+  background: rgba(0,0,0,0.35);
+  border: 1px solid rgba(255,120,70,0.25);
+  color: #f3ede8;
+  border-radius: 14px;
+  padding: 12px 14px;
+  font-family: "Geomini", sans-serif;
+  font-size: 0.95rem;
+  outline: none;
+  margin-bottom: 14px;
+}
+#post-form-panel input::placeholder,
+#post-form-panel textarea::placeholder{ color: rgba(243,237,232,0.35); }
+#post-form-panel input:focus,
+#post-form-panel textarea:focus{ border-color:#ff6a3d; }
+#post-form-panel textarea{ min-height:140px; resize:vertical; }
+
+.form-actions{ display:flex; gap:10px; }
+
+.btn-ghost{
+  padding: 10px 20px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,120,70,0.3);
+  background: transparent;
+  color: #f3ede8;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+/* ---------- post cards ---------- */
+.post-card{
+  padding: 26px;
+  margin-bottom: 20px;
+}
+
+.post-image{
+  width: 100%;
+  max-height: 360px;
+  object-fit: cover;
+  border-radius: 16px;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.post-title{ font-size: 1.4rem; font-weight: 600; margin-bottom: 6px; }
+.post-meta{ font-size: 0.8rem; color: rgba(243,237,232,0.5); margin-bottom: 14px; }
+.post-body{ font-size: 0.97rem; line-height: 1.65; color: rgba(243,237,232,0.85); white-space: pre-wrap; }
+
+.post-owner-actions{
+  display:flex;
+  gap:8px;
+  margin-top:16px;
+  padding-top:14px;
+  border-top: 1px solid rgba(255,120,70,0.2);
+}
+
+.icon-btn{
+  padding: 6px 16px;
+  border-radius: 999px;
+  border:none;
+  background: rgba(255,77,46,0.16);
+  color: #ff9142;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor:pointer;
+}
+.icon-btn.delete:hover{ background: rgba(255,60,60,0.25); color:#ff8080; }
+
+.empty-state{
+  text-align:center;
+  padding: 60px 20px;
+  color: rgba(243,237,232,0.45);
+}
+
+@media screen and (max-width:600px){
+  #topbar{ padding: 16px 20px; }
+  #feed-main{ padding: 30px 16px 70px; }
+  #feed-header h1{ font-size: 1.7rem; }
+}
